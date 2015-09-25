@@ -1,0 +1,20 @@
+// This will never work in plain c: Object type doesn't exist.
+#include <boost/any.hpp>
+#include <iostream>
+#include <vector>
+#include <string>
+
+int main()
+{
+    std::vector<boost::any> some_values;
+    boost::any variable(std::string("THis is variable "));
+    std::string s2  = boost::any_cast<std::string>(variable);
+    some_values.push_back(10);
+    const char* c_str = "Hello there!";
+    some_values.push_back(c_str);
+    some_values.push_back(std::string("Wow!"));
+    std::string& s  = 
+        boost::any_cast<std::string&>(some_values.back());
+    s += "That is great!\n";
+    std::cout << s << '\n' << s2;
+}
