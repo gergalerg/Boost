@@ -20,7 +20,7 @@ int main()
     array4_t val  = {66,67,68,69};
     for (auto x: val) std::cout << x << '\t';
     array4_t val_res = vector_advance(val);
-    std::cout << '\n';
-    for (auto x: val_res) std::cout << x << '\t';
-
+    assert(val.size() == 4);
+    assert(val[0] == 67);
+    std::cout << sizeof(char) * array4_t::static_size;
 }

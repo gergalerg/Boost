@@ -17,7 +17,7 @@ int main()
 {
     std::random_device rd;
     std::mt19937 mersenne(rd());
-    //std::srand((unsigned)time(0));  Not needed here.
+    //std::srand((unsigned)time(0));  Not needed here with random device.
     std::vector<int>  l;
     for (int i = 0; i < 100; ++i) {
         l.push_back( mersenne() % 100);
