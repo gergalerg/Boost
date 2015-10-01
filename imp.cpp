@@ -17,7 +17,4 @@ int main()
     Zero_Init<int> i; 
     assert (i == 0);
     i = 7; 
-    assert(i == 4);
-
-
 }

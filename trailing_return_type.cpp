@@ -15,7 +15,7 @@ int main() {
     x.v1.push_back(333);
     std::cout << typeid(x).name() << std::endl;
     for (auto t: x.v1) std::cout << t << '\n';
-    std::cout <<  << '\n';
+    std::cout << "Test" <<  '\n';
 
 
 }
